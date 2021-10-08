@@ -8,32 +8,65 @@
   <!-- CSS only -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <title>Pokemon Catcher</title>
+    <link rel="stylesheet" href="estilo.css">
+  <title>Votatoon</title>
 </head>
 
 <body>
   <!-- Just an image -->
   <nav class="navbar navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="./images/logo.svg" width="30" height="30" alt="" loading="lazy">
-        Blockdemy Pokemon Catcher
+      <a class="navbar-brand text" href="/">
+        <img src="./images/CN.png" width="120" height="80" alt="" loading="lazy">
+        <strong>Votatoon ¡elige tu caricatura favorita!</strong>
       </a>
     </div>
   </nav>
 
-
-  <div class="container mt-4">
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="inputGroupSelect01">Page</label>
-      <input id="pokemon-page" type="number" min="1" value="1" type="text" class="form-control" placeholder="Page" aria-label="Page"
-        aria-describedby="button-addon2">
-      <button id="update-pokemons" class="btn btn-outline-secondary" type="button" id="button-addon2">Update</button>
+  <section class="conte"> 
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card border border-danger" >
+          <img src="./images/chicas.jpg" class="card-img-top border border-danger" alt="...">
+          <div class="card-body">
+            <h3  class="card-title">Chicas Super poderosas</h3>
+            <p class="cant">Cant votos: </p>
+            <p class="cant" id="opc1"></p>
+            <!-- <button type="button" class="btn btn-dark">Votar</button> -->
+            <button id="opcion1" class="btn btn-danger" type="button" id="button-addon2" onclick="votar(0)">Votar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border border-success" >
+          <img src="./images/coraje.jpg"  height="280" class="card-img-top border border-success" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Perro Coraje</h3>
+            <p class="cant">Cant Votos:</p>
+            <p class="cant" id="opc2"></p>
+            <!-- <button type="button" class="btn btn-dark">Votar</button> -->
+            <button id="opcion2" class="btn btn-success" type="button" id="button-addon2" onclick="votar(1)">Votar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border border-primary" >
+          <img src="./images/aven.jpg" class="card-img-top border border-primary" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Las aventuras de Billy y Mandy</h3>
+            <p class="cant">Cant Votos:</p>
+            <p class="cant" id="opc3"></p>
+            <!-- <button type="button" class="btn btn-dark">Votar</button> -->
+            <button id="opcion3" class="btn btn-primary" type="button" id="button-addon2" onclick="votar(2)">Votar</button>
+          </div>
+        </div>
+      </div>
+      
     </div>
-    <div id="pokemons" class="row">
+  </section>
 
-    </div>
-  </div>
+
+
 
   <!-- JavaScript and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

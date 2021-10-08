@@ -1,5 +1,5 @@
-const PokeCatcher = artifacts.require('PokeCatcher');
+const Votacion = artifacts.require('Votacion');
 
 module.exports = function(deployer) {
-  deployer.deploy(PokeCatcher);
+  deployer.deploy(Votacion);
 };
